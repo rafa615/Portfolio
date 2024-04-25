@@ -110,6 +110,7 @@ section div button:hover{
     background-color: #000000;
     padding-top: 50px;
     padding-bottom: 10px;
+
 }
 .projetos h2{
     color: white;
@@ -117,31 +118,55 @@ section div button:hover{
     text-align: center;
     padding-bottom: 50px;
 }
-.card {
+
+#cards{
+    display: grid;
+    margin-left: 1%;
+    grid-template-areas:  
+    "cardWood cardGit cardAndroid";
+    grid-template-columns: 33% 33% 33%;
+}
+
+#cardWood{
+    grid-area: "cardWood";
+}
+
+#cardGit{
+    grid-area: "cardGit";
+}
+
+#cardAndroid{
+    grid-area: "cardAndroid";
+}
+
+#cardWood, #cardGit, #cardAndroid{
+    border: 2px solid #f9004d;
     background-color: #000000;
-    height: 300px;
-    width: 235px;
+    height: 400px;
+    width: 98.8%;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 20px;
     text-align: center;
-    display: inline-block;
     align-items: center;
-    margin-right: 200px;
     text-decoration: none;
+    max-width: 1280px;
 }
-.card img{
-    height: 100px;
+#cards img{
+    height: 150 px;
 }
-.card h5 {
+#cards h5{
+    height: 30px;
+    margin-top: 5%;
     color: white;
     font-size: 24px;
 }
-.card p {
+#cards p{
     color: #e2b9c6;
+    height: 80px;
     margin-top: 20px;
     margin-bottom: 30px;
 }
-.card a {
+#cards a{
     background-color: #f9004d;
     color: white;
     padding: 10px 20px;
@@ -150,9 +175,9 @@ section div button:hover{
     transition: 0.5s;
     text-decoration: none;
 }
-.card a:hover{
+#cards a:hover{
     background-color: transparent;
-    border:  2px solid #f9004d;
+    
 }
 .card-projetos{
     display: contents;
@@ -160,7 +185,7 @@ section div button:hover{
 }
 footer{
     background-color: #000000;
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 120px;
     display: flex;
     flex-direction: column;
