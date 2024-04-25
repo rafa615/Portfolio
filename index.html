@@ -1,226 +1,85 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-.caixa-principal {
-    height: 100vh;
-    width: 100%;
-    background-image: url(./img/background2.png);
-    background-size: cover;
-    background-position: center;
-    background-color: #191919;
-}
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 25px;
-}
-.portfolio{
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: 500;
+<!DOCTYPE html>
+<html lang="pt-br">
 
-}
-.portfolio span {
-    color: #f9004d;
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Hernades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-}
-li{
-    color: white;
-    list-style: none;
-    display: inline-block;
-    font-size: 25px;
-    margin-right: 30px;
-    cursor: pointer;
-}
-li:hover{
-    color: #f9004d;
-    transition: 0.5s;
-}
-.meu-nome{
-    position: absolute;
-    top: 50%;
-    left: 7%;
-}
-h1 {
-    color: white;
-    font-size: 55px;
-}
-h1 span{
-    color: #f9004d;
-}
-.meu-nome h3 {
-    color: white;
-    font-size: 25px;
-}
-section{
-    display: flex;
-    align-items: center;
-    padding: 60px 15%;
-    background-color: #000000;
-}
-.link-menu{
-    text-decoration: none;
-    color: white;
-}
-section img {
-    height: 400px;
-    border-radius: 100%;
-    border: 2px solid #f9004d;
-    background-position: no-repeat;
-    margin-right: 30px;
-}
-section div h2{
-    color: white;
-    font-size: 65px;
-}
-section div p{
-    color: #e2b9c6;
-    font-size: 24px;
-    margin-top: 15px;
-    margin-bottom: 60px;
-}
+<body>
+    <header>
+    <div class="caixa-principal" id="home">
+        <nav>
+            <h2 class="portfolio">Portfo<span>lio</span></h2>
 
-section div button{
-    color: white;
-    background: #f9004d;
-    height: 50px;
-    width: 180px;
-    font-size: 18px;
-    border: none;
-    border-radius: 26px;
-    cursor: pointer;
-}
-.botao1 a{
-    text-decoration: none;
-    color: #e2b9c6;
-}
-section div button:hover{
-    color: black;
-    border: 3px solid #f9004d;
-    transition: 0.5s;
+            <ul>
+                <li><a class="link-menu" href="#home">Home</a></li>
+                <li><a class="link-menu" href="#sobre">Sobre</a></li>
+                <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
+                <li><a class="link-menu" href="#fale-comigo">Fale comigo</a></li>
+            </ul>
+        </nav>
+        <div class="meu-nome">
+            <h1>Rafael <span>Hernandes</span></h1>
+            <h3>Programador Front End</h3>
 
-}
-.projetos{
-    background-color: #000000;
-    padding-top: 50px;
-    padding-bottom: 10px;
+        </div>
+    </div>
+    <section id="sobre">
+        <img src="./img/rafael.png">
+        <div>
+            <h2> Sobre mim</h2>
+            <p> Eu sou estudante de Análise e Desenvolvimento de Sistemas.
+                Possuo conhecimentos em aplicações com HTML, CSS, Javascript, Linguagem C, Python e Android Studio.</p>
+            <button class="botao1"> <a href="https://wa.me/5511941207879"target="_blank">Entre em contato </a></button>
+        </div>
+    </section> 
+    <div class="card-projetos">
 
-}
-.projetos h2{
-    color: white;
-    font-size: 45px;
-    text-align: center;
-    padding-bottom: 50px;
-}
+        <div class="projetos" id="projetos-id">
+            <h2> Principais Projetos</h2>
+            <div id="cards">
+            <div id="cardWood">
+                <img src="./img/wood.png" height="100px">
+                <h5>WoodArde</h5>
+                <p>Projeto sobre Esportes Radicais e lazer com o intuito de expandir mais a prática esportiva.</p>
+                <div class="wood1"><a href="https://youtu.be/XuIgHYBIvTw" target="blank"> Ver Projeto</a></div>
+            </div>
+            <div id="cardGit">
+                <img src="./img/github.png" height="100px">
+                <h5>Github</h5>
+                <p>Projetos e práticas profissionais</p>
+                <a href="https://github.com/rafa615" target="_blank"> Ver Projeto</a>
+            </div> 
+            <div id="cardAndroid">
+                <img src="./img/Android.png" height="100px">
+                <h5>Dispositivo Android</h5>
+                <p>Projeto em andamento para um aplicativo de dispositivo Android sobre Trilhas e aventuras.
+                </p>
+                <a href="https://youtu.be/ezuwLwmk_WA" target="_blank"> Ver Projeto</a>
+            </div>
+            </div>
 
-#cards{
-    display: grid;
-    margin-left: 1%;
-    grid-template-areas:  
-    "cardWood cardGit cardAndroid";
-    grid-template-columns: 33% 33% 33%;
-}
+        </div>
+        
+    </div>
+    </header>   
+    <footer id="fale-comigo">
+        <h5>Rafael Hernandes</h5>
+        <p>Para mais informações</p>
+        <div class="social">
+            <a href="https://wa.me/5511941207879"target="_blank">
+            <img src="img/whatsapp.png"></a>
 
-#cardWood{
-    grid-area: "cardWood";
-}
+        <a href="https://linkedin.com/in/rafa615" target="_blank">
+        <img src="img/Linkedin.png"></a>
+    </div>
 
-#cardGit{
-    grid-area: "cardGit";
-}
+    </footer>
 
-#cardAndroid{
-    grid-area: "cardAndroid";
-}
+</body>
 
-#cardWood, #cardGit, #cardAndroid{
-    border: 2px solid #f9004d;
-    background-color: #000000;
-    height: 400px;
-    width: 98.8%;
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    align-items: center;
-    text-decoration: none;
-    max-width: 1280px;
-}
-#cards img{
-    height: 150 px;
-}
-#cards h5{
-    height: 30px;
-    margin-top: 5%;
-    color: white;
-    font-size: 24px;
-}
-#cards p{
-    color: #e2b9c6;
-    height: 80px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-#cards a{
-    background-color: #f9004d;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.5s;
-    text-decoration: none;
-}
-#cards a:hover{
-    background-color: transparent;
-    
-}
-.card-projetos{
-    display: contents;
-    justify-content: space-around
-}
-footer{
-    background-color: #000000;
-    padding-top: 150px;
-    padding-bottom: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-footer h5{
-    color: white;
-    font-size: 35px;
-}
-footer p {
-    color: white;
-    font-size: 20px;
-    margin-bottom: 30px;
-    margin-top: 14px;
-}
-.social{
-    display: flex;
-    gap: 20px;
-}
-.social img{
-    height: 30px;
-    border-radius: 50%;
-}
-.social a{
-    background-color: #f9004d;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    height: 50px;
-    width: 50px;
-    justify-content: center;
-    cursor: pointer;
-}
-.social a:hover{
-    transform: scale(1.3);
-    transition: 0.5s;
-}
+</html>
